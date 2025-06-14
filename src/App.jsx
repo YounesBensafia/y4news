@@ -1,10 +1,17 @@
-import React from "react";
+import React, { use } from "react";
 import Navbar from "./components/Navbar";
+import News from "./pages/News";
+import { ThemeContext } from "./context/ThemeContext";
 
 const App = () => {
+  const { theme } = React.useContext(ThemeContext);
+  React.useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+  }, [theme]);
   return (
     <div>
       <Navbar />
+      <News />
     </div>
   );
 };
