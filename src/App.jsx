@@ -4,6 +4,7 @@ import News from "./pages/News";
 import { ThemeContext } from "./context/ThemeContext";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 const App = () => {
+  const [articles, setArticles] = React.useState([]);
   const { theme } = React.useContext(ThemeContext);
   React.useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
@@ -12,8 +13,8 @@ const App = () => {
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<News country="us" category="general" />} />
-        <Route path="/business" element={<News country="us" category="business" />} />
+        <Route path="/" element={<News country="us" category="general" articles={articles} setArticles={setArticles}/>} />
+        <Route path="/business" element={<News country="us" category="business" articles={articles} setArticles={setArticles}/>} />
         <Route path="/entertainment" element={<News country="us" category="entertainment" />} />
         <Route path="/general" element={<News country="us" category="general" />} />
         <Route path="/health" element={<News country="us" category="health" />} />
