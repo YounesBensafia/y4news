@@ -24,6 +24,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             justifyContent: "center",
             alignItems: "center",
             boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)", // optional
+            opacity: 0.8, // optional
           }}
           component={
             <svg

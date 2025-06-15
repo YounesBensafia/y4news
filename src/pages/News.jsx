@@ -27,7 +27,7 @@ const News = ({ country, category, articles, setArticles }) => {
   };
 
   useEffect(() => {
-    // fetchAllNews();
+    fetchAllNews();  
   }, [country, category]);
 
   return (
