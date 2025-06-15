@@ -20,9 +20,9 @@ const News = ({ country, category, articles, setArticles }) => {
   };
   useEffect(() => {
     fetchAllNews();
-  }, []);
+  }, [country, category]);
   return (
-    <div className="bg-gray-200 dark:bg-black py-24 px-4 md:py-0">
+    <div className="bg-gray-200 dark:bg-black py-24 px-4 md:py-25">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-7">
         {articles.map((article, index) => (
           <NewsCard key={index} article={article} />

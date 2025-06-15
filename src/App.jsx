@@ -15,12 +15,12 @@ const App = () => {
       <Routes>
         <Route path="/" element={<News country="us" category="general" articles={articles} setArticles={setArticles}/>} />
         <Route path="/business" element={<News country="us" category="business" articles={articles} setArticles={setArticles}/>} />
-        <Route path="/entertainment" element={<News country="us" category="entertainment" />} />
-        <Route path="/general" element={<News country="us" category="general" />} />
-        <Route path="/health" element={<News country="us" category="health" />} />
-        <Route path="/science" element={<News country="us" category="science" />} />
-        <Route path="/sports" element={<News country="us" category="sports" />} />
-        <Route path="/technology" element={<News country="us" category="technology" />} />
+        <Route path="/entertainment" element={<News country="us" category="entertainment" articles={articles} setArticles={setArticles}/>} />
+        <Route path="/general" element={<News country="us" category="general" articles={articles} setArticles={setArticles}/>} />
+        <Route path="/health" element={<News country="us" category="health" articles={articles} setArticles={setArticles}/>} />
+        <Route path="/science" element={<News country="us" category="science" articles={articles} setArticles={setArticles}/>} />
+        <Route path="/sports" element={<News country="us" category="sports" articles={articles} setArticles={setArticles}/>} />
+        <Route path="/technology" element={<News country="us" category="technology" articles={articles} setArticles={setArticles}/>} />
       </Routes>
     </>
   );

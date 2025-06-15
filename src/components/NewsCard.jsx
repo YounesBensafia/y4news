@@ -15,6 +15,9 @@ const NewsCard = ({ article }) => {
             <span>By {author || 'Unknown'} </span>
             <span>{new Date(publishedAt).toLocaleDateString()}</span>
         </div>
+        <div className="mt-1 text-xs text-blue-500 font-medium">
+            <span>{source.name}</span>
+        </div>
       </div>
     </div>
   );
