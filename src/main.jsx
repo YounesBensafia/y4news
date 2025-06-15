@@ -6,7 +6,6 @@ import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "./context/ThemeContext.jsx";
 import ScrollToTop from "react-scroll-to-top";
 import "./index.css";
-import { TbBackground } from "react-icons/tb";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -16,11 +15,27 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <ScrollToTop
           smooth
           style={{
-            backgroundColor: "#3882F6",
+            backgroundColor: "#2a4068",
+            width: "50px",
+            height: "50px",
+            border: "2px solid #fff",
+            borderRadius: "30%",
             display: "flex",
-            alignItems: "center",
             justifyContent: "center",
+            alignItems: "center",
+            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)", // optional
           }}
+          component={
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24" // Adjusted viewBox for better centering
+              fill="white"
+              width="30"
+              height="30"
+            >
+              <path d="M12 8l6 6H6z" /> {/* Clean upward triangle */}
+            </svg>
+          }
         />
       </BrowserRouter>
     </ThemeProvider>

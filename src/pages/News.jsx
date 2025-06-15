@@ -5,12 +5,13 @@ import { Loader2 } from "lucide-react";
 const News = ({ country, category, articles, setArticles }) => {
   const [loading, setLoading] = React.useState(false);
 
-
   const fetchAllNews = async () => {
     try {
       setLoading(true);
       const response = await fetch(
-        `https://gnews.io/api/v4/top-headlines?category=${category}&lang=en&country=${country}&max=10&token=${import.meta.env.VITE_API_KEY}`
+        `https://gnews.io/api/v4/top-headlines?category=${category}&lang=en&country=${country}&max=10&token=${
+          import.meta.env.VITE_API_KEY
+        }`
       );
       if (!response.ok) {
         throw new Error("Network response was not ok");
@@ -26,25 +27,50 @@ const News = ({ country, category, articles, setArticles }) => {
   };
 
   useEffect(() => {
-    fetchAllNews();
+    // fetchAllNews();
   }, [country, category]);
 
-  
   return (
     <>
       {loading && (
         <div className="flex flex-col justify-center items-center min-h-screen bg-gradient-to-br from-blue-100 via-white to-blue-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
           <Loader2 className="h-12 w-12 animate-spin text-blue-500 dark:text-gray-100 mb-4" />
-          <h1 className="text-gray-800 text-xl font-semibold dark:text-gray-100">Loading...</h1>
         </div>
       )}
 
       {!loading && (
-        <div className="min-h-screen bg-gradient-to-br from-gray-00 via-white to-blue-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-24 px-4">
+        <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-100 dark:from-gray-950 dark:via-gray-900 dark:to-indigo-950 py-24 px-4">
           <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {articles.map((article, index) => (
+            {/* {articles.map((article, index) => (
               <NewsCard key={index} article={article} />
-            ))}
+            ))} */}
+            <p>No articles found.</p>
+            <p>Please try a different category or check back later.</p>
+            <p>Make sure to check your internet connection.</p>
+            <p>If the problem persists, please contact support.</p>
+            <p>We appreciate your patience.</p>
+                       <p>Please try a different category or check back later.</p>
+            <p>Make sure to check your internet connection.</p>
+            <p>If the problem persists, please contact support.</p>
+            <p>We appreciate your patience.</p>
+                       <p>Please try a different category or check back later.</p>
+            <p>Make sure to check your internet connection.</p>
+            <p>If the problem persists, please contact support.</p>
+            <p>We appreciate your patience.</p>
+                       <p>Please try a different category or check back later.</p>
+            <p>Make sure to check your internet connection.</p>
+            <p>If the problem persists, please contact support.</p>
+            <p>We appreciate your patience.</p>           <p>Please try a different category or check back later.</p>
+            <p>Make sure to check your internet connection.</p>
+            <p>If the problem persists, please contact support.</p>
+            <p>We appreciate your patience.</p>           <p>Please try a different category or check back later.</p>
+            <p>Make sure to check your internet connection.</p>
+            <p>If the problem persists, please contact support.</p>
+            <p>We appreciate your patience.</p>           <p>Please try a different category or check back later.</p>
+            <p>Make sure to check your internet connection.</p>
+            <p>If the problem persists, please contact support.</p>
+            <p>We appreciate your patience.</p>
+
           </div>
         </div>
       )}
@@ -53,4 +79,3 @@ const News = ({ country, category, articles, setArticles }) => {
 };
 
 export default News;
-
