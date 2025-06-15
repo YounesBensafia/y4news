@@ -4,7 +4,6 @@ import { FaMoon, FaSun } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { ThemeContext } from "../context/ThemeContext";
-import logo from './assets/logo.png';
 
 const Navbar = ({ setArticles }) => {
   const { theme, setTheme } = React.useContext(ThemeContext);
@@ -52,7 +51,7 @@ const Navbar = ({ setArticles }) => {
           className="md:text-3xl text-xl font-extrabold text-blue-600 dark:text-blue-400 tracking-tight hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
         >
           <img
-            src={logo}
+            src="/logo.svg"
             alt="Logo"
             className="py-2 mr-3 h-12 md:h-15"
           />
