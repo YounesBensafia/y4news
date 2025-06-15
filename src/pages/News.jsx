@@ -27,7 +27,7 @@ const News = ({ country, category, articles, setArticles }) => {
   };
 
   useEffect(() => {
-    // fetchAllNews();
+    fetchAllNews();
   }, [country, category]);
 
   return (
@@ -39,38 +39,11 @@ const News = ({ country, category, articles, setArticles }) => {
       )}
 
       {!loading && (
-        <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-100 dark:from-gray-950 dark:via-gray-900 dark:to-indigo-950 py-24 px-4">
+        <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-100 dark:from-gray-950 dark:via-gray-900 dark:to-indigo-950 py-30 px-4">
           <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {/* {articles.map((article, index) => (
+            {articles.map((article, index) => (
               <NewsCard key={index} article={article} />
-            ))} */}
-            <p>No articles found.</p>
-            <p>Please try a different category or check back later.</p>
-            <p>Make sure to check your internet connection.</p>
-            <p>If the problem persists, please contact support.</p>
-            <p>We appreciate your patience.</p>
-                       <p>Please try a different category or check back later.</p>
-            <p>Make sure to check your internet connection.</p>
-            <p>If the problem persists, please contact support.</p>
-            <p>We appreciate your patience.</p>
-                       <p>Please try a different category or check back later.</p>
-            <p>Make sure to check your internet connection.</p>
-            <p>If the problem persists, please contact support.</p>
-            <p>We appreciate your patience.</p>
-                       <p>Please try a different category or check back later.</p>
-            <p>Make sure to check your internet connection.</p>
-            <p>If the problem persists, please contact support.</p>
-            <p>We appreciate your patience.</p>           <p>Please try a different category or check back later.</p>
-            <p>Make sure to check your internet connection.</p>
-            <p>If the problem persists, please contact support.</p>
-            <p>We appreciate your patience.</p>           <p>Please try a different category or check back later.</p>
-            <p>Make sure to check your internet connection.</p>
-            <p>If the problem persists, please contact support.</p>
-            <p>We appreciate your patience.</p>           <p>Please try a different category or check back later.</p>
-            <p>Make sure to check your internet connection.</p>
-            <p>If the problem persists, please contact support.</p>
-            <p>We appreciate your patience.</p>
-
+            ))}
           </div>
         </div>
       )}

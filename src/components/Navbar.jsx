@@ -50,7 +50,11 @@ const Navbar = ({ setArticles }) => {
           to="/"
           className="md:text-3xl text-xl font-extrabold text-blue-600 dark:text-blue-400 tracking-tight hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
         >
-          News
+          <img
+            src="src/assets/logo.png"
+            alt="Logo"
+            className="py-2 mr-3 h-12 md:h-15"
+          />
         </Link>
 
         {/* Desktop Links */}
@@ -76,7 +80,7 @@ const Navbar = ({ setArticles }) => {
               onChange={handleSearch}
               type="text"
               placeholder="Search..."
-              className="md:w-64 w-32 pl-9 py-2 text-sm rounded-full bg-gray-100 dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-400 dark:focus:ring-blue-500 transition"
+              className="md:w-64 w-25 pl-9 py-2 text-sm rounded-full bg-gray-100 dark:bg-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-400 dark:focus:ring-blue-500 transition"
             />
           </div>
           <button
@@ -99,12 +103,12 @@ const Navbar = ({ setArticles }) => {
       </div>
       {/* Mobile Links */}
       {open && (
-        <div className="md:hidden px-4 pb-2">
+        <div className="md:hidden px-4 pb-2 ">
           {links.map((link) => (
             <Link
               key={link.name}
               to={link.path}
-              className="block text-gray-700 dark:text-gray-300 font-medium hover:text-blue-500 dark:hover:text-blue-400 py-2"
+              className="block px-4 py-2 rounded-lg text-gray-700 dark:text-gray-300 font-semibold hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
               onClick={() => setOpen(false)}
             >
               {link.name}

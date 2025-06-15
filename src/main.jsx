@@ -15,11 +15,11 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <ScrollToTop
           smooth
           style={{
-            backgroundColor: "#2a4068",
+            backgroundColor: "#1447E6",
             width: "50px",
             height: "50px",
             border: "2px solid #fff",
-            borderRadius: "30%",
+            borderRadius: "35%",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
