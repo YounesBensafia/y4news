@@ -51,7 +51,7 @@ const Navbar = ({ setArticles }) => {
           className="md:text-3xl text-xl font-extrabold text-blue-600 dark:text-blue-400 tracking-tight hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
         >
           <img
-            src="/logo.svg"
+            src="/logo.png"
             alt="Logo"
             className="py-2 mr-3 h-12 md:h-15"
           />
