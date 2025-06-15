@@ -11,7 +11,7 @@ const App = () => {
   }, [theme]);
   return (
     <>
-      <Navbar />
+      <Navbar setArticles={setArticles} />
       <Routes>
         <Route path="/" element={<News country="us" category="general" articles={articles} setArticles={setArticles}/>} />
         <Route path="/business" element={<News country="us" category="business" articles={articles} setArticles={setArticles}/>} />
