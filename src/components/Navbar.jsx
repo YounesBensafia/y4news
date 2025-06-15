@@ -12,10 +12,11 @@ const Navbar = ({ setArticles }) => {
     const query = event.target.value;
     try {
       const res = await fetch(
-        `https://newsapi.org/v2/everything?q=${query}&apiKey=${
+        `https://gnews.io/api/v4/search?q=${query}&token=${
           import.meta.env.VITE_API_KEY
         }`
       );
+
       if (!res.ok) {
         throw new Error("Network response was not ok");
       }
@@ -34,7 +35,7 @@ const Navbar = ({ setArticles }) => {
   const links = [
     { name: "Business", path: "/business" },
     { name: "Entertainment", path: "/entertainment" },
-    { name: "General", path: "/general" },
+    { name: "World", path: "/world" },
     { name: "Health", path: "/health" },
     { name: "Science", path: "/science" },
     { name: "Sports", path: "/sports" },

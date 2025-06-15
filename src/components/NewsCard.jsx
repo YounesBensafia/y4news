@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 const NewsCard = ({ article }) => {
-  const { source, author, title, description, url, urlToImage, publishedAt } =
+  const { source, title, description, url, image, publishedAt } =
     article;
   return (
     <div className="max-w-md mx-auto bg-white dark:bg-gray-900 hover:scale-105 transition-all rounded-lg shadow-md overflow-hidden hover:shadow-lg duration-300">
       <img
-        src={urlToImage}
+        src={image}
         alt={title}
         className="w-full h-48 object-cover bg-gray-200"
       />
@@ -22,8 +22,7 @@ const NewsCard = ({ article }) => {
             : description}
         </p>
         <div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
-          <span>By {author || "Unknown"} </span>
-          <span>{new Date(publishedAt).toLocaleDateString()}</span>
+          <span>published on {new Date(publishedAt).toLocaleDateString()}</span>
         </div>
         <div className="mt-1 text-xs text-blue-500 font-medium">
           <span>{source.name}</span>

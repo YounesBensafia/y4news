@@ -5,23 +5,21 @@ import { Loader2 } from "lucide-react";
 const News = ({ country, category, articles, setArticles }) => {
   const [loading, setLoading] = React.useState(false);
 
+
   const fetchAllNews = async () => {
     try {
       setLoading(true);
       const response = await fetch(
-        `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${
-          import.meta.env.VITE_API_KEY
-        }`
+        `https://gnews.io/api/v4/top-headlines?category=${category}&lang=en&country=${country}&max=10&token=${import.meta.env.VITE_API_KEY}`
       );
       if (!response.ok) {
-        console.log(await response.text());
         throw new Error("Network response was not ok");
       }
       const data = await response.json();
-      console.log(data);
+
       setArticles(data.articles);
     } catch (error) {
-      console.error("Error fetching news:", error);
+      console.warn("Error fetching news:", error);
     } finally {
       setLoading(false);
     }
@@ -31,6 +29,7 @@ const News = ({ country, category, articles, setArticles }) => {
     fetchAllNews();
   }, [country, category]);
 
+  
   return (
     <>
       {loading && (
@@ -54,3 +53,4 @@ const News = ({ country, category, articles, setArticles }) => {
 };
 
 export default News;
+

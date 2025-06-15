@@ -16,7 +16,7 @@ const App = () => {
         <Route path="/" element={<News country="us" category="general" articles={articles} setArticles={setArticles}/>} />
         <Route path="/business" element={<News country="us" category="business" articles={articles} setArticles={setArticles}/>} />
         <Route path="/entertainment" element={<News country="us" category="entertainment" articles={articles} setArticles={setArticles}/>} />
-        <Route path="/general" element={<News country="us" category="general" articles={articles} setArticles={setArticles}/>} />
+        <Route path="/world" element={<News country="us" category="world" articles={articles} setArticles={setArticles}/>} />
         <Route path="/health" element={<News country="us" category="health" articles={articles} setArticles={setArticles}/>} />
         <Route path="/science" element={<News country="us" category="science" articles={articles} setArticles={setArticles}/>} />
         <Route path="/sports" element={<News country="us" category="sports" articles={articles} setArticles={setArticles}/>} />
