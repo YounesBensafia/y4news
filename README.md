@@ -48,3 +48,9 @@ npm install
 
 # Start the dev server
 npm run dev
+```
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/4788a652-4a59-4db3-8e47-b46e7a7a4e69" width="90%" alt="Home Page Screenshot"/>
+  <br/><br/>
+  <img src="https://github.com/user-attachments/assets/f54936df-804d-414b-b737-0ca771d9d2be" width="90%" alt="Dark Mode Screenshot"/>
+</div>
